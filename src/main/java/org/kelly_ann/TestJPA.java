@@ -38,8 +38,15 @@ public class TestJPA {
 		// make sure this object is persisted to the DB.
 		// commit() tell JPA to run a SQL INSERT statement to add the obj to the DB.
 		// close() MUST be called explicitly even if you are using try-with-resources from Java 8.
-			//em.persist(employee1);
+		/*
+		//PART 1 OF 2
+		// save a new employee to the table
+		Employee employee1 = new Employee("Kelly", "Ann", "Engineer", 1000);
+		em.persist(employee1);
+		*/
 		
+		
+		//PART 2 OF 2
 		//print the employees in the table
 		Query q = em.createQuery("select employee from Employee employee");	// using JPQL (Java Persistence Query Language)
 		@SuppressWarnings("unchecked")
